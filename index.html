@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GLEN WALLPAPER 3D+</title>
     <style>
-        /* Basic CSS for simple layout and centering */
+        /* CSS for simple layout and styling */
         body {
             font-family: sans-serif;
             margin: 0;
@@ -21,21 +21,31 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px; /* Space between images */
+            gap: 20px;
+            max-width: 1200px; /* Limits gallery width on large screens */
+            margin: 0 auto;
         }
         .wallpaper-item {
             border: 1px solid #ccc;
             padding: 10px;
             background-color: white;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-            width: 300px; /* Fixed width for each item */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 300px;
             text-align: center;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        .wallpaper-item:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
         }
         .wallpaper-item img {
-            max-width: 100%;
+            width: 100%; /* Image fills its container */
             height: auto;
+            max-height: 200px; /* Controls display size */
+            object-fit: cover;
             display: block;
             margin-bottom: 10px;
+            border-radius: 4px;
         }
         .download-btn {
             display: inline-block;
@@ -57,6 +67,20 @@
     <h1>GLEN WALLPAPER 3D+</h1>
 
     <div class="gallery" id="wallpaper-gallery">
+        
+        <div class="wallpaper-item">
+            <img src="wallpapers/YOUR_FIRST_IMAGE_NAME.jpg" alt="A description of this 3D wallpaper">
+            <a href="wallpapers/YOUR_FIRST_IMAGE_NAME.jpg" download class="download-btn">
+                Download Now
+            </a>
+        </div>
+
+        <div class="wallpaper-item">
+            <img src="wallpapers/YOUR_SECOND_IMAGE_NAME.png" alt="Another cool 3D background">
+            <a href="wallpapers/YOUR_SECOND_IMAGE_NAME.png" download class="download-btn">
+                Download Now
+            </a>
+        </div>
         
         </div>
 
